@@ -8,6 +8,8 @@ const permutator = (inputArr) => {
       for (let i = 0; i < arr.length; i++) {
         let curr = arr.slice();
         let next = curr.splice(i, 1);
+        console.log(`curr : ${curr} , next : ${next}, m : ${m}, i : ${i}`, result);
+
         permute(curr.slice(), m.concat(next));
       }
     }

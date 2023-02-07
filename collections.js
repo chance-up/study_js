@@ -7,9 +7,13 @@ const stringToArr = () => {
   let arr = 'abcde'.split('');
   console.log(arr);
 };
-stringToArr();
 
-const _t1 = () => {
+const charToInt = () => {
+  'a'.charCodeAt();
+  String.fromCharCode(66);
+};
+
+const reduce = () => {
   const arr = [4, 7, 12];
   return arr.reduce((acc, cur, idx) => {
     return acc + cur;
