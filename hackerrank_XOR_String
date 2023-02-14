@@ -1,0 +1,21 @@
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
+var input = '';
+let currentLine = 0;
+process.stdin.on('data', function (chunk) {
+  input += chunk;
+});
+process.stdin.on('end', function () {
+  input = input.split('\n');
+
+  main();
+});
+
+function readLine() {
+  return input[currentLine++];
+}
+
+function main() {
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const firstMultipleInput = readLine().replace(/\s+$/g, '').split(' ');
+}
