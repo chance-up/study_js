@@ -20,12 +20,22 @@ const reduce = () => {
   }, 0);
 };
 
-const _t2 = () => {
+const map = () => {
   const map1 = new Map();
   map1.set('a', 1);
   map1.set('b', 2);
   map1.set('c', 3);
   map1.set('a', (map1.get('a') + 1) | 0);
+
+  let obj = { c: 2, a: 4, d: 1, b: 3 };
+  let myMap1 = new Map(Object.entries(obj));
+  let myMap2 = new Map([
+    ['c', 2],
+    ['a', 4],
+    ['d', 1],
+    ['b', 3],
+  ]);
+
   return map1;
 };
 
